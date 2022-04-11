@@ -1,0 +1,52 @@
+[user]
+	name = carsten.hald
+	email = Carsten.hald@Keylane.com
+[core]
+	autocrlf = false
+	ignorecase = true
+	editor = 'C:\\Windows\\System32\\Notepad.exe'
+	excludesfile = ~/.gitignore
+	
+[pull]
+	rebase = true
+[merge]
+	conflictstyle = diff3
+[filesystem "Oracle Corporation|1.8.0_212-1-ojdkbuild|1252428564"]
+	timestampResolution = 2001 microseconds
+	minRacyThreshold = 0 nanoseconds
+[alias]
+	hist = log --all --graph --decorate --oneline
+	gc = git checkout
+	st = status
+	br = branch
+	co = checkout
+	sl = stash list
+	sll = stash-list
+	slll = stash-list --full
+	ss = stash save
+	sa = !sh -c 'git stash apply stash@{$1}' -
+	sd = !sh -c 'git stash drop stash@{$1}' -
+	gsnh = !sh -c 'git show --name-only HEAD@{$1}' -
+	gt = !sh -c 'git cat-file tag $1' -
+[merge]
+	tool = bcMerge
+[mergetool "bcMerge"]
+	cmd = \"C:\\Program Files\\Beyond Compare 4\\BComp.exe\" \"$REMOTE\" \"$LOCAL\" \"$BASE\" \"$MERGED\"
+[diff]
+	tool = bcMerge
+[difftool]
+	prompt = false
+[difftool "bcMerge"]
+	cmd = 'C:/Program Files/Beyond Compare 4/BComp.exe' \"$LOCAL\" \"$REMOTE\" 
+[mergetool "sourcetree"]
+	cmd = 'C:/Program Files/Beyond Compare 4/BComp.exe' \"$LOCAL\" \"$REMOTE\" \"$BASE\" -o \"$MERGED\"
+	trustExitCode = true
+[difftool "sourcetree"]
+	cmd = '' \"$LOCAL\" \"$REMOTE\"
+[filesystem "Oracle Corporation|1.8.0_212-1-ojdkbuild|-391679606"]
+	timestampResolution = 1001 microseconds
+	minRacyThreshold = 0 nanoseconds
+[gui]
+	recentrepo = D:/NewWork/topTwo/topdanmark
+[credential "https://git.schantz.com"]
+	provider = bitbucket
