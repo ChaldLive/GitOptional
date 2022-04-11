@@ -1,0 +1,32 @@
+[user]
+	name = Carsten Hald
+	email = chald.live@gmail.com
+[core]
+	editor = 'C:\\Program Files\\Microsoft VS Code\\code.exe' -n -w
+	longpaths = true
+[alias]
+	hist = log --all --graph --decorate --oneline
+	gc = git checkout
+	st = status
+	br = branch
+	co = checkout
+	sl = stash list
+	sll = stash-list
+	slll = stash-list --full
+	ss = stash save
+	sa = !sh -c 'git stash apply stash@{$1}' -
+	sd = !sh -c 'git stash drop stash@{$1}' -
+
+
+[diff]
+    tool = vscode
+[merge]
+    tool = vscode
+[difftool "vscode"]
+    cmd = code-insiders --wait --diff $LOCAL $REMOTE
+[mergetool "vscode"]
+    cmd = code-insiders --wait $MERGED
+
+[filesystem "Oracle Corporation|1.8.0_261|-2110371936"]
+	timestampResolution = 1001 microseconds
+	minRacyThreshold = 0 nanoseconds
